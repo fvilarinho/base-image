@@ -12,7 +12,7 @@ It's based on Alpine Linux and contains a basic structure/tool for a container s
 - `openssh-client`
 
 
-The directory structure of the container defined by the environment variables are described below:
+The directory structure of the container is defined by the environment variables described below:
 
 - `HOME_DIR:` Home directory of the all files.
 - `BIN_DIR:` Must contains all binaries and executables.
@@ -20,7 +20,11 @@ The directory structure of the container defined by the environment variables ar
 - `DATA_DIR:` Must contains all the generated/persistent data.
 - `LIB_DIR:` Must contains all the libraries/resources.
 
-There are two environment variables
+
+The name and the version of the container is defined by the environment variables described below:
+
+- `APP_NAME:` Name of the container.
+- `APP_VERSION:` Version of the container.
 
 
 Build status
