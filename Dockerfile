@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-LABEL maintainer="fvilarinho@innovativethinking.com.br"
+LABEL maintainer="fvilarinho@concepting.com.br"
 
 ENV TZ=America/Sao_Paulo
 
