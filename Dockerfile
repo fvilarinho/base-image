@@ -12,8 +12,10 @@ ENV BIN_DIR=${HOME_DIR}/bin
 ENV ETC_DIR=${HOME_DIR}/etc
 ENV DATA_DIR=${HOME_DIR}/data
 ENV LIB_DIR=${HOME_DIR}/lib
+ENV LOG_DIR=${HOME_DIR}/log
 
-RUN mkdir -p ${HOME_DIR} ${BIN_DIR} ${ETC_DIR} ${DATA_DIR} ${LIB_DIR}
+RUN mkdir -p ${HOME_DIR} ${BIN_DIR} ${ETC_DIR} ${DATA_DIR} ${LIB_DIR} ${LOG_DIR} && \
+    chmod -R og-rwx ${DATA_DIR}
 
 RUN apk update && \
     apk --no-cache add ca-certificates \
