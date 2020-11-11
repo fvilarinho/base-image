@@ -5,7 +5,7 @@ This a base image to build Docker containers.
 It's based on Alpine Linux and contains a basic structure/tool for a container such as:
 
 - `bash / bash-completion`
-- `vim`
+- `vim / jq`
 - `zip / unzip / tar / gzip`
 - `curl / wget`
 - `bind-tools / net-tools / whois / telnet`
