@@ -24,6 +24,7 @@ RUN apk update && \
                        bash-completion \
                        tzdata \
                        vim \
+                       jq \
                        unzip \
                        curl \
                        wget \
