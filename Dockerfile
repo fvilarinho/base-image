@@ -7,7 +7,7 @@ ENV TZ=America/Sao_Paulo
 ENV APP_NAME=app
 ENV APP_VERSION=1.0.0
 
-ENV HOME_DIR=/opt/concepting/${APP_NAME}/${APP_VERSION}
+ENV HOME_DIR=/opt/concepting
 ENV BIN_DIR=${HOME_DIR}/bin
 ENV ETC_DIR=${HOME_DIR}/etc
 ENV DATA_DIR=${HOME_DIR}/data
