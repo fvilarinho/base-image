@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.12.1
 
 LABEL maintainer="fvilarinho@concepting.com.br"
 
