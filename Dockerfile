@@ -34,4 +34,9 @@ RUN apk update && \
                        busybox-extras \
                        openssh-client
                        
-WORKDIR ${HOME_DIR}                       
+RUN addgroup -S group && \
+    adduser -S user -G group
+
+USER user                       
+                       
+WORKDIR ${HOME_DIR}
