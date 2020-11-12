@@ -29,7 +29,8 @@ RUN apk update && \
                        net-tools \
                        whois \
                        busybox-extras \
-                       openssh-client
+                       openssh-client \
+                       outils-md5
                        
 RUN addgroup -S group && \
     adduser -S user -G group
