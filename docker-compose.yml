@@ -4,7 +4,7 @@ services:
   base-image:
     build:
       context: .
-    image: ghcr.io/concepting-com-br/base-image:1.0.0
+    image: ghcr.io/concepting-com-br/base-image:${BUILD_VERSION}
     container_name: base-image
     hostname: base-image
     depends_on:
