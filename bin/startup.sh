@@ -19,6 +19,9 @@ if [ -z "$ETCD_LISTEN_CLIENT_URLS" ]; then
 	echo "Service settings were gathered!"
 fi
 
+export SETTINGS
+export PORT
+
 $BIN_DIR/install.sh
 
 echo "Starting the service..."
