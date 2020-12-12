@@ -4,7 +4,7 @@ function getSettings(){
 
 	while [ true ];
 	do
-		SETTINGS=`etcdctl --endpoints=$SETTINGS_URL get $APP_NAME`
+		SETTINGS=`etcdctl --endpoints=$SETTINGS_URL get $APP_NAME | tail -n +2`
 	
 		if [ -z "$SETTINGS" ]; then
 			sleep 1	
@@ -13,8 +13,6 @@ function getSettings(){
 				CONT=1
 			fi
 		else
-			SETTINGS=`echo $SETTINGS | sed 's|'"$APP_NAME"'||g'`
-			
 			break
 		fi
 	done
