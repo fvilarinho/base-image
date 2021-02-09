@@ -5,7 +5,7 @@ source $BIN_DIR/functions.sh
 export BUILD_NAME=$(getEnv "BUILD_NAME")
 export BUILD_VERSION=$(getEnv "BUILD_VERSION")
 
-BANNER="$BUILD_NAME $BUILD_VERSION"
+BANNER="$BUILD_NAME:$BUILD_VERSION"
 
 figlet -m smushmode $BANNER
 
