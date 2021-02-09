@@ -1,10 +1,15 @@
 #!/bin/bash
 
-figlet -m smushmode $APP_NAME $APP_VERSION
+source $BIN_DIR/functions.sh
+
+export BUILD_NAME=$(getEnv "BUILD_NAME")
+export BUILD_VERSION=$(getEnv "BUILD_VERSION")
+
+BANNER="$BUILD_NAME $BUILD_VERSION"
+
+figlet -m smushmode $BANNER
 
 echo
-
-source $BIN_DIR/functions.sh
 
 if [ -z "$ETCD_LISTEN_CLIENT_URLS" ] && [ ! -z "$SETTINGS_URL" ]; then
 	echo "Gathering the service settings..."
@@ -14,6 +19,10 @@ if [ -z "$ETCD_LISTEN_CLIENT_URLS" ] && [ ! -z "$SETTINGS_URL" ]; then
 	
 	if [ ! -z "$SETTINGS" ]; then
 		PORT=`echo $SETTINGS | jq -r .port`
+		
+		if [ $PORT == "null" ]; then
+			unset PORT
+		fi
 	fi
 	
 	echo "Service settings were gathered!"
@@ -31,6 +40,8 @@ if [ ! -z "$1" ]; then
 fi
 
 if [ ! -z "$PORT" ]; then
+echo $PORT
+echo 1
 	while [ true ];
 	do
 		RESULT=`netstat -an|grep $PORT|grep LISTEN`

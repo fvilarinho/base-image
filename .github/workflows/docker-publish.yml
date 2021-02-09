@@ -1,9 +1,5 @@
 name: Docker
 
-on:
-  push:
-    branches:
-      - main
 jobs:
   run:
     runs-on: ubuntu-latest
