@@ -1,1 +1,4 @@
-{}
+{
+	"buildName": "base-image",
+	"buildVersion": "latest"
+}

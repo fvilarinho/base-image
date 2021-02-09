@@ -4,9 +4,6 @@ LABEL maintainer="fvilarinho@concepting.com.br"
 
 ENV TZ=America/Sao_Paulo
 
-ENV APP_NAME=app
-ENV APP_VERSION=1.0.0
-
 ENV SETTINGS_HOSTNAME=host.docker.internal
 ENV SETTINGS_PORT=2379
 ENV SETTINGS_URL=http://${SETTINGS_HOSTNAME}:${SETTINGS_PORT}
@@ -51,6 +48,7 @@ RUN mkdir -p ${HOME_DIR} \
              ${LOG_DIR}
 
 COPY bin/* ${BIN_DIR}/
+COPY .env ${ETC_DIR}/
 
 RUN chmod -R og-rwx ${DATA_DIR} && \
     chmod +x ${BIN_DIR}/* && \
