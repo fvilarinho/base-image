@@ -21,12 +21,6 @@ The directory structure of the container is defined by the environment variables
 - `LIB_DIR:` Must contains all the libraries/resources.
 
 
-The name and the version of the container is defined by the environment variables described below:
-
-- `APP_NAME:` Name of the container.
-- `APP_VERSION:` Version of the container.
-
-
 Build status
 ============
 
