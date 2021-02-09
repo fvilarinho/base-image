@@ -40,8 +40,6 @@ if [ ! -z "$1" ]; then
 fi
 
 if [ ! -z "$PORT" ]; then
-echo $PORT
-echo 1
 	while [ true ];
 	do
 		RESULT=`netstat -an|grep $PORT|grep LISTEN`
