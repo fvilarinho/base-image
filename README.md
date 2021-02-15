@@ -29,10 +29,10 @@ The last stable version is 1.0.0
 ![CI/CD](https://github.com/concepting-com-br/base-image/workflows/Docker/badge.svg)
 
 
-Installation
-============
+How to use
+==========
 
-To use this image, just put the line below in your Dockerfile.
+Just put the line below in your Dockerfile.
 
 `FROM ghcr.io/concepting-com-br/base-image:1.0.0` - To use the last stable version.
 
