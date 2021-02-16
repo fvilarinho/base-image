@@ -2,7 +2,7 @@ function getEnv {
    KEY=$1
    VALUE=`cat $ETC_DIR/.env | grep "$KEY" | cut -d'=' -f2`
    
-   echo $VALUE
+   echo "$VALUE"
 }
 
 function getSettings(){
@@ -25,5 +25,5 @@ function getSettings(){
 		fi
 	done
 
-	echo $SETTINGS
+	echo "$SETTINGS"
 }
