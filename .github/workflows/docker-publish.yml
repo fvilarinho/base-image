@@ -6,9 +6,9 @@ on:
       - '*'
     paths-ignore:
       - 'LICENSE'
-      - '**.md'
-      - '**.yml'
-      - '**.sh'
+      - '*.md'
+      - '*.yml'
+      - '*.sh'
       
 jobs:
   run:
