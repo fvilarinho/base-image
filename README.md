@@ -26,7 +26,7 @@ Build status
 
 The last stable version is 1.0.0
 
-![CI/CD](https://github.com/concepting-com-br/base-image/workflows/Docker/badge.svg)
+![CI/CD](https://github.com/concepting-com-br/base-image/workflows/CI/CD/badge.svg)
 
 
 How to use

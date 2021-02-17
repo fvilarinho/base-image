@@ -1,9 +1,15 @@
-name: Docker
+name: CI/CD
 
 on:
   push:
     branches:
       - '*'
+    paths-ignore:
+      - 'LICENSE'
+      - '**.md'
+      - '**.yml'
+      - '**.sh'
+      
 jobs:
   run:
     runs-on: ubuntu-latest
