@@ -12,7 +12,7 @@ function getSettings(){
 	while [ true ];
 	do
 	    BUILD_NAME=$(getEnv "BUILD_NAME")
-		SETTINGS=`etcdctl --endpoints=$SETTINGS_URL get $BUILD_NAME | tail -n +2`
+		SETTINGS=`etcdctl --endpoints=$SETTINGS_URL get /$BUILD_NAME | tail -n +2`
 	
 		if [ -z "$SETTINGS" ]; then
 			sleep 1	
