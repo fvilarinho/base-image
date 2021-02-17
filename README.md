@@ -2,7 +2,7 @@ Synopsys
 ========
 
 This a base image to build Docker containers.
-It's based on Alpine Linux and contains a basic structure/tool for a container such as:
+It's based on Alpine Linux and contains a basic structure and tools for a container such as:
 
 - `bash / bash-completion`
 - `vim / jq`
