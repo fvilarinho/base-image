@@ -18,7 +18,7 @@ if [ -z "$ETCD_LISTEN_CLIENT_URLS" ] && [ ! -z "$SETTINGS_URL" ]; then
 	PORT=
 	
 	if [ ! -z "$SETTINGS" ]; then
-		PORT=`echo $SETTINGS | jq -r .port`
+		PORT=`echo $SETTINGS | jq -r .port.value`
 		
 		if [ $PORT == "null" ]; then
 			unset PORT
