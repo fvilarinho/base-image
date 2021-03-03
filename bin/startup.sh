@@ -11,7 +11,7 @@ figlet -m smushmode $BANNER
 
 echo
 
-if [ -z "$ETCD_LISTEN_CLIENT_URLS" ] && [ ! -z "$SETTINGS_URL" ]; then
+if [ -z "$ETCD_LISTEN_CLIENT_URLS" ]; then
 	echo "Gathering the service settings..."
 	
 	SETTINGS=$(getSettings)
