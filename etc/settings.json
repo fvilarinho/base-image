@@ -1,4 +1,12 @@
 {
-	"buildName": "base-image",
-	"buildVersion": "1.0.0"
+	"build":{
+		"name": {
+			"description": "Name of the build.",
+			"value": "base-image"
+		},
+		"version": {
+			"description": "Version of the build.",
+			"value": "1.0.0"
+		}
+	}
 }
