@@ -1,4 +1,4 @@
-FROM alpine:3.12.1
+FROM alpine:latest
 
 LABEL maintainer="fvilarinho@concepting.com.br"
 
@@ -50,15 +50,10 @@ RUN mkdir -p ${HOME_DIR} \
 COPY bin/* ${BIN_DIR}/
 COPY .env ${ETC_DIR}/
 
-RUN chmod -R og-rwx ${DATA_DIR} && \
-    chmod +x ${BIN_DIR}/* && \
+RUN chmod +x ${BIN_DIR}/* && \
     chown -R user:group ${HOME_DIR} && \
-    chown -R user:group ${BIN_DIR} && \
-    chown -R user:group ${ETC_DIR} && \
-    chown -R user:group ${DATA_DIR} && \
-    chown -R user:group ${LIB_DIR} && \
-    chown -R user:group ${LOG_DIR}
-    
+    chmod -R o-rwx ${HOME_DIR}
+
 RUN ln -s ${BIN_DIR}/startup.sh /entrypoint.sh    
 
 USER user                       
