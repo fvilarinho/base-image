@@ -2,7 +2,7 @@
 
 source $BIN_DIR/functions.sh
 
-export ID=$(getHostname)
+export ID=$(getId)
 export VERSION=$(getVersion)
 
 BANNER="$ID:$VERSION"

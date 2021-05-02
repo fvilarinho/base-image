@@ -2,6 +2,10 @@ function getHostname(){
    echo "$(cat /etc/hostname)"
 }
 
+function getId(){
+  echo "$(cat $ETC_DIR/.release | grep BUILD_NAME | cut -d'=' -f2)"
+}
+
 function getVersion(){
   echo "$(cat $ETC_DIR/.release | grep BUILD_VERSION | cut -d'=' -f2)"
 }
@@ -12,8 +16,8 @@ function getSettings(){
 
 	while [ true ];
 	do
-	  ID=$(getHostname)
-		SETTINGS=`etcdctl --endpoints=$SETTINGS_URL get /$ID | tail -n +2`
+	  HOSTNAME=$(getHostname)
+		SETTINGS=`etcdctl --endpoints=$SETTINGS_URL get /HOSTNAME | tail -n +2`
 	
 		if [ -z "$SETTINGS" ]; then
 			sleep 1	
