@@ -17,7 +17,7 @@ function getSettings(){
 	while [ true ];
 	do
 	  HOSTNAME=$(getHostname)
-		SETTINGS=`etcdctl --endpoints=$SETTINGS_URL get /HOSTNAME | tail -n +2`
+		SETTINGS=`etcdctl --endpoints=$SETTINGS_URL get /$HOSTNAME | tail -n +2`
 	
 		if [ -z "$SETTINGS" ]; then
 			sleep 1	
