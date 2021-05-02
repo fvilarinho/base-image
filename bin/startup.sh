@@ -2,10 +2,10 @@
 
 source $BIN_DIR/functions.sh
 
-export BUILD_NAME=$(getEnv "BUILD_NAME")
-export BUILD_VERSION=$(getEnv "BUILD_VERSION")
+export ID=$(getHostname)
+export VERSION=$(getVersion)
 
-BANNER="$BUILD_NAME:$BUILD_VERSION"
+BANNER="$ID:$VERSION"
 
 figlet -m smushmode $BANNER
 
