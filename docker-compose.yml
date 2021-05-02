@@ -4,9 +4,9 @@ services:
   base-image:
     build:
       context: .
-    image: ghcr.io/concepting-com-br/base-image:${BUILD_VERSION}
-    container_name: base-image
-    hostname: base-image
+    image: ghcr.io/concepting-com-br/${BUILD_NAME}:${BUILD_VERSION}
+    container_name: ${BUILD_NAME}
+    hostname: ${BUILD_NAME}
     depends_on:
       - etcd
       
@@ -17,7 +17,7 @@ services:
     ports: 
       - "2379:2379"
     volumes:
-      - ./etc/settings.json:/home/user/etc/base-image.json
+      - ./etc/settings.json:/home/user/etc/${BUILD_NAME}.json
       - etcd-data:/home/user/data
 
 volumes:

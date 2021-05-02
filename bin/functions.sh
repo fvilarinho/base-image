@@ -1,8 +1,9 @@
-function getEnv {
-   KEY=$1
-   VALUE=`cat $ETC_DIR/.env | grep "$KEY" | cut -d'=' -f2`
-   
-   echo "$VALUE"
+function getHostname(){
+   echo "$(cat /etc/hostname)"
+}
+
+function getVersion(){
+  echo "$(cat $ETC_DIR/.release | grep BUILD_VERSION | cut -d'=' -f2)"
 }
 
 function getSettings(){
@@ -11,8 +12,8 @@ function getSettings(){
 
 	while [ true ];
 	do
-	    BUILD_NAME=$(getEnv "BUILD_NAME")
-		SETTINGS=`etcdctl --endpoints=$SETTINGS_URL get /$BUILD_NAME | tail -n +2`
+	  ID=$(getHostname)
+		SETTINGS=`etcdctl --endpoints=$SETTINGS_URL get /$ID | tail -n +2`
 	
 		if [ -z "$SETTINGS" ]; then
 			sleep 1	

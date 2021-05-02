@@ -48,7 +48,7 @@ RUN mkdir -p ${HOME_DIR} \
              ${LOG_DIR}
 
 COPY bin/* ${BIN_DIR}/
-COPY .env ${ETC_DIR}/
+COPY .env ${ETC_DIR}/.release
 
 RUN chmod +x ${BIN_DIR}/* && \
     chown -R user:group ${HOME_DIR} && \
