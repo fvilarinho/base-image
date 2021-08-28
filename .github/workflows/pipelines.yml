@@ -3,7 +3,8 @@ name: CI/CD
 on:
   push:
     branches:
-      - '*'
+      - 'develop'
+      - 'master'
     paths-ignore:
       - 'LICENSE'
       - '*.md'
