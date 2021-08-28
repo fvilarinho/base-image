@@ -24,9 +24,9 @@ The directory structure of the container is defined by the environment variables
 Build status
 ============
 
-The last stable version is 1.0.0
+The last stable version is 1.1.0
 
-![CI/CD](https://github.com/concepting-com-br/base-image/workflows/CI/CD/badge.svg)
+![CI/CD](https://github.com/fvilarinho/base-image/workflows/CI/CD/badge.svg)
 
 
 How to use
@@ -34,9 +34,9 @@ How to use
 
 Just put the line below in your Dockerfile.
 
-`FROM ghcr.io/concepting-com-br/base-image:1.0.0` - To use the last stable version.
+`FROM ghcr.io/fvilarinho/base-image:1.1.0` - To use the last stable version.
 
-`FROM ghcr.io/concepting-com-br/base-image:latest` - To use the development version.
+`FROM ghcr.io/fvilarinho/base-image:latest` - To use the development version.
 
 
 License
