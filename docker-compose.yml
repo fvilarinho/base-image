@@ -9,7 +9,7 @@ services:
       - etcd
       
   etcd:
-    image: ghcr.io/fvilarinho/etcd:1.1.0
+    image: ghcr.io/fvilarinho/etcd:1.2.0
     container_name: etcd
     hostname: etcd
     ports: 
