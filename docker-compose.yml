@@ -2,7 +2,7 @@ services:
   base-image:
     build:
       context: .
-    image: ghcr.io/fvilarinho/${BUILD_NAME}:${BUILD_VERSION}
+    image: ${DOCKER_REGISTRY_URL}/${DOCKER_REGISTRY_ID}/${BUILD_NAME}:${BUILD_VERSION}
     container_name: ${BUILD_NAME}
     hostname: ${BUILD_NAME}
     depends_on:
