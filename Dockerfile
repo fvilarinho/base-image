@@ -4,7 +4,7 @@ LABEL maintainer="fvilarinho@gmail.com"
 
 ENV TZ=America/Sao_Paulo
 
-ENV SETTINGS_HOSTNAME=host.docker.internal
+ENV SETTINGS_HOSTNAME=etcd
 ENV SETTINGS_PORT=2379
 ENV SETTINGS_URL=http://${SETTINGS_HOSTNAME}:${SETTINGS_PORT}
 
