@@ -21,14 +21,6 @@ The directory structure of the container is defined by the environment variables
 - `LIB_DIR:` Must contains all the libraries/resources.
 
 
-Build status
-============
-
-The last stable version is 1.2.0
-
-![CI/CD](https://github.com/fvilarinho/base-image/workflows/CI/CD/badge.svg)
-
-
 How to use
 ==========
 
