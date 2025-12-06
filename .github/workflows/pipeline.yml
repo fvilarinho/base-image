@@ -3,8 +3,10 @@ name: CI/CD Pipeline
 on:
   push:
     paths-ignore:
-      - '*.md'
+      - '.gitignore'
+      - 'etc/settings.json'
       - 'LICENSE'
+      - '*.md'
       - 'start.sh'
       - 'stop.sh'
 
