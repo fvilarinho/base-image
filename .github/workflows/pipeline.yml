@@ -2,6 +2,11 @@ name: CI/CD Pipeline
 
 on:
   push:
+    paths-ignore:
+      - '*.md'
+      - 'LICENSE'
+      - 'start.sh'
+      - 'stop.sh'
 
 jobs:
   workflow:
