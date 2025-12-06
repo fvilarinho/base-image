@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Set up QEMU
+      - name: Set up environment
         uses: docker/setup-qemu-action@v3
 
       - name: Set up Docker
@@ -22,5 +22,5 @@ jobs:
       - name: Download the project files
         uses: actions/checkout@v3
 
-      - name: Build
+      - name: Build and Publish
         run: ./build.sh
